@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+
+		<title>National Squishyball League Championships</title>
+		<link rel="stylesheet" type="text/css" href="../../styles.css">	
+	
+	</head>
+	
+	<body>
+		<div style = "height: 2em;">  &nbsp;  </div>
+		<h1 class = "h1primary">Squishyball</h1>
+
+		<div style = "height: 1em;">  &nbsp;  </div>
+		<h3 class = "h3primary">Description</h3>
+		<p>Congratulations! The Acme Axegrinders, which you own, are the regular season champions of the National Squishyball League (NSL). Your team will now play a championship series against the Boondocks Barbarians, which had the second-best regular season record. You feel good about Acme’s chances in the series because Acme won exactly 60 percent of the hundreds of games it played against Boondocks this season. (The NSL has an incredibly long regular season.) The NSL has two special rules for the playoffs:</p>
+		<ol>
+			<li>The owner of the top-seeded team (i.e., you) gets to select the length of the championship series in advance of the first game, so you could decide to play a single game, a best two out of three series, a three out of five series, etc., all the way up to a 50 out of 99 series.</li>
+			<li>The owner of the winning team gets $1 million minus $10,000 for each of the victories required to win the series, regardless of how many games the series lasts in total. Thus, if the top-seeded team’s owner selects a single-game championship, the winning owner will collect $990,000. If he or she selects a 4 out of 7 series, the winning team’s owner will collect $960,000. The owner of the losing team gets nothing.</li>
+		</ol>
+		
+		<p>Since Acme has a 60 percent chance of winning any individual game against Boondocks, Rule 1 encourages you to opt for a very long series to improve Acme’s chances of winning the series. But Rule 2 means that a long series will mean less winnings for you if Acme does take the series.</p><br />
+		<p>How long a series should you select in order to maximize your expected winnings? And how much money do you expect to win?</p>
+		
+		<div style = "height: 1em;">  &nbsp;  </div>
+		<h3 class = "h3primary">Link</h3>
+		&ldquo;National Squishyball League Championships&rdquo; is the puzzle for <a href="https://fivethirtyeight.com">fivethirtyeight.com</a>'s Riddler Classic for <a href="https://fivethirtyeight.com/features/can-you-eat-more-pizza-than-your-siblings/">July 14th, 2017</a>. This page is an attempt to simulate different series lengths to find the highest expected win.
+	
+		<div style = "height: 1em;">  &nbsp;  </div>	
+		<h3 class = "h3primary">Single Length Simulation</h3>
+		<form method="GET" action="simulate.html">
+			Series Length<br />
+			<select name="seriesLength">
+                <option value=1>single game</option>
+                <option value=3>best of 3</option>
+				<option value=5>best of 5</option>
+				<option value=7>best of 7</option>
+				<option value=9>best of 9</option>
+				<option value=11>best of 11</option>
+				<option value=13>best of 13</option>
+				<option value=15>best of 15</option>
+				<option value=17>best of 17</option>
+                <option value=19>best of 19</option>
+				<option value=21>best of 21</option>
+				<option value=23>best of 23</option>
+				<option value=25>best of 25</option>
+				<option value=27>best of 27</option>
+                <option value=29>best of 29</option>
+				<option value=31>best of 31</option>
+				<option value=33>best of 33</option>
+				<option value=35>best of 35</option>
+				<option value=37>best of 37</option>
+                <option value=39>best of 39</option>
+				<option value=41>best of 41</option>
+				<option value=43>best of 43</option>
+				<option value=45>best of 45</option>
+				<option value=47>best of 47</option>
+                <option value=49>best of 49</option>
+				<option value=51>best of 51</option>
+				<option value=53>best of 53</option>
+				<option value=55>best of 55</option>
+				<option value=57>best of 57</option>
+                <option value=59>best of 59</option>
+				<option value=61>best of 61</option>
+				<option value=63>best of 63</option>
+				<option value=65>best of 65</option>
+				<option value=67>best of 67</option>
+                <option value=69>best of 69</option>
+				<option value=71>best of 71</option>
+				<option value=73>best of 73</option>
+				<option value=75>best of 75</option>
+				<option value=77>best of 77</option>
+                <option value=79>best of 79</option>
+				<option value=81>best of 81</option>
+				<option value=83>best of 83</option>
+				<option value=85>best of 85</option>
+				<option value=87>best of 87</option>
+                <option value=89>best of 89</option>
+				<option value=91>best of 91</option>
+				<option value=93>best of 93</option>
+				<option value=95>best of 95</option>
+				<option value=97>best of 97</option>
+                <option value=99>best of 99</option>				
+            </select>
+						
+			<br /><br />
+		
+			Number of Series to Simulate:<br />
+			<input type="number" name="numberOfSeries" value="100" min="1"><br />
+
+            <button type="submit">Simulate</button>
+		</form>
+
+		<div style = "height: 1em;">  &nbsp;  </div>
+		<h3 class = "h3primary">All Length Simulations</h3>
+		<form method="GET" action="simulateAll.html">
+						
+			Number of Series to Simulate for Each:<br />
+			<input type="number" name="numberOfSeries" value="100" min="1"><br />
+
+            <button type="submit">Simulate</button>
+		</form>		
+		
+		
+	</body>
+</html>

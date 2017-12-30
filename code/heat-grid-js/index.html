@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Heat Grid Simulator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Heat Grid Simulator</h1>
+            </div>
+            <p>Click/tap on a cell (a square in the grid below) to select it and add heat to that cell. (Selected cells have a red borders.) You can heat as many or as few of the cells as you like.</p>
+            <p>Each heat interval, after the heat is added, the heat spreads from each cell to its neighbor cells. Heat will be lost off the grid on all sides.</p>
+
+            <div class="panel panel-default">
+                <p>Choose the grid size; resizing will start over.
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="3" onclick="sizeChecked(3)"> 3x3
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="5" onclick="sizeChecked(5)"> 5x5
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="7" onclick="sizeChecked(7)"> 7x7
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="11" checked="checked" onclick="sizeChecked(11)"> 11x11
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="13" onclick="sizeChecked(13)"> 13x13
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gridSize" value="17" onclick="sizeChecked(17)"> 17x17
+                    </label>
+                </p>
+                <p>Choose the heat interval speed. How many times does the screen update per second (1-20)?
+                    <input type="number" id="intervalSpeed" min="1" max="20" value="5" onchange="speedChanged()"/>
+                </p>
+                <p>
+                    <input type="button" class="btn" value="Turn All On" onclick="turnAllOn()" />
+                    <input type="button" class="btn" value="Turn All Off" onclick="turnAllOff()" />
+                </p>
+            </div>
+
+            <div class="table-responsive">
+                <div id="grid">
+                </div>
+            </div>
+
+            <div id="totalHeatFormat">
+                <span id="totalHeat">0.0</span>&nbspTotal Heat
+            </div>
+            <br /><br />
+            <div class="well">For background and programming notes, read the <a href="readme.txt">Readme</a>.</div>
+
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
