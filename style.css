@@ -24,6 +24,10 @@ body {
     #section-b .content-text {
         columns: 2;
         column-gap: 2em;
+        text-indent: 1em; /* To show paragraph starts. */
+        page-break-inside: avoid; /* For Firefox. */
+        -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+        break-inside: avoid; /* For standard browsers like IE. :-) */
     }
 
 }
