@@ -13,13 +13,13 @@ body {
 }
 
 .box {
-    height: 480px;
+    height: 300px;
     padding: 8px;
-    /*
-    border: solid;
-    border-width: 1px;
-    border-color: black;
-    */
+}
+
+.box-big {
+    height: 420px;
+    padding: 8px;
 }
 
 /* Media Queries */
@@ -27,7 +27,6 @@ body {
 @media(min-width: 700px) {
     .grid {
         display: grid;
-
     }
 
     #section-a .content-text,
@@ -35,32 +34,5 @@ body {
         columns: 2;
         column-gap: 2em;
     }
-
 }
 
-/*
-
-
-    #section-a p {
-        padding-top: 0;
-    }
-
-    .content-wrap {
-        grid-column: 2/4;
-    }
-
-    .box, #main-footer div {
-        grid-column: span 2;
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #section-b li {
-        width: 31%;
-    }
-}
-
-*/
