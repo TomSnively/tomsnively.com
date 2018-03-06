@@ -1,96 +1,82 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-	<head>
+<head>
+	<title>Molecular Music Box</title>
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
 
-		<title>Molecular Music Box</title>
-		<link
-            rel          = "icon"
-            href         = "../favicon.ico"
-            type         = "image/x-icon"
-        />
+<body>
+<div style = "height: 2em;">  &nbsp;  </div>
+<div><a href="../index.html"><img src = "../img/long-logo-white.png" /></a></div>
+<div style = "height: 4em;">  &nbsp;  </div>
 
-        <link
-            rel          = "shortcut icon"
-            href         = "../favicon.ico"
-            type         = "image/x-icon"
-        />
-		<link rel="stylesheet" type="text/css" href="../styles.css">
-	</head>
-	
-	<body>
-		<div style = "height: 2em;">  &nbsp;  </div>
-		<div><a href="../index.html"><img src = "../long-logo-white.png" /></a></div>
-		<div style = "height: 4em;">  &nbsp;  </div>
 
-		
-		<h1 class = "h1primary">Molecular Music Box</h1>
-		<div style = "height: 1em;">  &nbsp;  </div>
-		
-		<div>
-				<p>Molecular Music Box is a music app that I wrote that creates algorithmic solo piano music.<br /><br /></p>
-				<p>I originally found this algorithm from a <a href="https://www.youtube.com/watch?v=3Z8CuAC_-bg">YouTube video</a> by Professor Duncan Lockerby. In his video, he describes how you create music with "mix of music, maths, and molecular dynamics." <br /><br /></p>
-				<p>It's not easy to explain in text, but I will try. For the song 9 D 1 1/2, in the key of C, only the piano white notes (the naturals) are played. It may help to play the song using the music player here:<br /><br /></p>
-				<p>
-					<audio width="640" height="150" controls="controls">
-						<source src="9-D-1.5-by-Tom-Snively.mp3" type="audio/mp3" />
-						You do not have an HTML5 enabled browser.
-					</audio>
-					<br />
-					9 D 1 1/2, by Tom Snively, created by Molecular Music Box<br /><br />
-				</p>
+<h1 class = "h1primary">Molecular Music Box</h1>
+<div style = "height: 1em;">  &nbsp;  </div>
 
-				<p>A low D is played and held for 9 beats. You then play the next white key up, an E, and hold that for 9 beats. You continue up the white keys. While this is happening, you use a &ldquo;loop pedal&rtquo; to record and repeat 4-measure loops. So, whatever sounded during the first 4 measures gets played again in the 5th measure while you add new notes. Each time you loop the 4 measures, there will be additional notes played.<br /><br /></p>
-				<p>You continue doing this until you are starting a new note at the same exact time an existing note is schedule to sound. In that case, you change from the initial length (9) to the secondary length (1 1/2), and play all the notes for 1 1/2 beats each until you again have a note already starting at that time. When that happens you switch back to the initial length (9 beats).<br /><br /></p>
-				<p>If you’d like to try Molecular Music Box, you can play or download Molecular Music Box below. The program has sliders for initial length and secondary length so you can make them go from 1/2 to 16, and the initial length can go from C2 (two octaves below middle C) to C4 (middle C). I also added three advanced features. You can adjust tempo from 60 to 300. I also added a &ldquo;key&rdquo; slider so you can have the song use any key instead of all white keys. I also allow you to change the loop length to go from 8 beats up to 32 beats.<br /><br /></p>
-				<p>My song 8 C 14 1/2 is in the key of Eb, giving it a natural minor sound. The loop length is 15, instead of an equal 4 measure 16. Listen here:<br /><br /></p>
-				<p>
-					<audio width="640" height="150" controls="controls">
-						<source src="8-C-14.5-by-Tom-Snively.mp3" type="audio/mp3" />
-						You do not have an HTML5 enabled browser.
-					</audio>
-					<br />
-					8 C 14 1/2, by Tom Snively, created by Molecular Music Box<br /><br />
-				</p>
-				<p>I talk about this and more in <a href="http://insidevgm.com/028-mmom-molecular-music-box">episode 28</a> of the Making My Own Music podcast (which you can find now by searching for &ldquo;Inside Video Game Music&rdquo;).<br /><br /></p>
-				<p>Thank you to <a href="http://mildon.me/">Mildon Studios</a> for the beautiful piano samples.<br /><br /></p>
-		</div>
-		
-		<div>
-            <img src = "mmb.png" title="Molecular Music Box screenshot" alt="Molecular Music Box screenshot"/>
-        </div>
-		
-		<div style = "height: 2em;">  &nbsp;  </div>
-		
-		<h3 class = "h2primary">Versions</h3>
-		<div style = "height: 1em;">  &nbsp;  </div>
-		
-		<h3 class = "h4primary">Browser (WebGL)</h3>
-		The WebGL version can be played <a href="../mmb">here</a>. This is a non-mobile browser version.
+<div>
+	<p>Molecular Music Box is a music app that I wrote that creates algorithmic solo piano music.<br /><br /></p>
+	<p>I originally found this algorithm from a <a href="https://www.youtube.com/watch?v=3Z8CuAC_-bg">YouTube video</a> by Professor Duncan Lockerby. In his video, he describes how you create music with "mix of music, maths, and molecular dynamics." <br /><br /></p>
+	<p>It's not easy to explain in text, but I will try. For the song 9 D 1 1/2, in the key of C, only the piano white notes (the naturals) are played. It may help to play the song using the music player here:<br /><br /></p>
+	<p>
+		<audio width="640" height="150" controls="controls">
+			<source src="9-D-1.5-by-Tom-Snively.mp3" type="audio/mp3" />
+			You do not have an HTML5 enabled browser.
+		</audio>
+		<br />
+		9 D 1 1/2, by Tom Snively, created by Molecular Music Box<br /><br />
+	</p>
 
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h4primary">Windows</h3>
-		The Windows version can be downloaded <a href="mmbwin.zip">here</a>. Unzip (extract all) this file, and execute MatchEm.exe; no installation is required.
+	<p>A low D is played and held for 9 beats. You then play the next white key up, an E, and hold that for 9 beats. You continue up the white keys. While this is happening, you use a &ldquo;loop pedal&rtquo; to record and repeat 4-measure loops. So, whatever sounded during the first 4 measures gets played again in the 5th measure while you add new notes. Each time you loop the 4 measures, there will be additional notes played.<br /><br /></p>
+	<p>You continue doing this until you are starting a new note at the same exact time an existing note is schedule to sound. In that case, you change from the initial length (9) to the secondary length (1 1/2), and play all the notes for 1 1/2 beats each until you again have a note already starting at that time. When that happens you switch back to the initial length (9 beats).<br /><br /></p>
+	<p>If you’d like to try Molecular Music Box, you can play or download Molecular Music Box below. The program has sliders for initial length and secondary length so you can make them go from 1/2 to 16, and the initial length can go from C2 (two octaves below middle C) to C4 (middle C). I also added three advanced features. You can adjust tempo from 60 to 300. I also added a &ldquo;key&rdquo; slider so you can have the song use any key instead of all white keys. I also allow you to change the loop length to go from 8 beats up to 32 beats.<br /><br /></p>
+	<p>My song 8 C 14 1/2 is in the key of Eb, giving it a natural minor sound. The loop length is 15, instead of an equal 4 measure 16. Listen here:<br /><br /></p>
+	<p>
+		<audio width="640" height="150" controls="controls">
+			<source src="8-C-14.5-by-Tom-Snively.mp3" type="audio/mp3" />
+			You do not have an HTML5 enabled browser.
+		</audio>
+		<br />
+		8 C 14 1/2, by Tom Snively, created by Molecular Music Box<br /><br />
+	</p>
+	<p>I talk about this and more in <a href="http://insidevgm.com/028-mmom-molecular-music-box">episode 28</a> of the Making My Own Music podcast (which you can find now by searching for &ldquo;Inside Video Game Music&rdquo;).<br /><br /></p>
+	<p>Thank you to <a href="http://mildon.me/">Mildon Studios</a> for the beautiful piano samples.<br /><br /></p>
+</div>
 
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h4primary">Mac (OSX)</h3>
-		The Mac (OSX) version can be downloaded <a href="mmbosx.zip">here</a>.
+<div>
+	<img src = "mmb.png" title="Molecular Music Box screenshot" alt="Molecular Music Box screenshot"/>
+</div>
 
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h4primary">Linux</h3>
-		The Linux version can be downloaded <a href="mmblinux.zip">here</a>.
-		
-		
-		<div style = "height: 2em;">  &nbsp;  </div>
+<div style = "height: 2em;">  &nbsp;  </div>
 
-        <div>
-			<a class = "languagelink"  href = "index.html">  tomsnively.com  </a>
-		</div>
+<h3 class = "h2primary">Versions</h3>
+<div style = "height: 1em;">  &nbsp;  </div>
 
-        <div style = "height: 1em;">  &nbsp;  </div>		
-		
-		
-		
-		
-	</body>
+<h3 class = "h4primary">Browser (WebGL)</h3>
+The WebGL version can be played <a href="../mmb">here</a>. This is a non-mobile browser version.
+
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h4primary">Windows</h3>
+The Windows version can be downloaded <a href="mmbwin.zip">here</a>. Unzip (extract all) this file, and execute MatchEm.exe; no installation is required.
+
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h4primary">Mac (OSX)</h3>
+The Mac (OSX) version can be downloaded <a href="mmbosx.zip">here</a>.
+
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h4primary">Linux</h3>
+The Linux version can be downloaded <a href="mmblinux.zip">here</a>.
+
+<div style = "height: 2em;">  &nbsp;  </div>
+
+<div>
+	<a class = "languagelink"  href = "index.html">  tomsnively.com  </a>
+</div>
+
+<div style = "height: 1em;">  &nbsp;  </div>
+
+</body>
 </html>

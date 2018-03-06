@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-	<head>
+<head>
+	<title>Coinball</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+</head>
 
-		<title>Coinball</title>
-		<link rel="stylesheet" type="text/css" href="../../styles.css">	
-	</head>
-	
-	<body>
-		<div style = "height: 2em;">  &nbsp;  </div>
-			
-		<h1 class = "h1primary">Coinball</h1>
-		
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h3primary">Description</h3>
-		Coinball is a contest where two players take turns trying to call a fair coin toss. The game lasts for 100 total tosses, 50 tosses for each player. On each toss, the player calling it announces either &ldquo;heads&rdquo; or &ldquo;tails&rdquo; and either &ldquo;rush&rdquo; or &ldquo;pass.&rdquo; If he says &ldquo;rush,&rdquo; he gets one point if he calls the toss correctly, and his opponent gets one point if the call is incorrect. Saying &ldquo;pass&rdquo; means the toss is worth two points to the caller if he calls the toss correctly and two points to his opponent if he does not. At the end, the player with the most points wins. (The margin of victory is irrelevant; in Coinball, league rankings are based only on wins, with a draw counting as half a win.)
-		
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h3primary">Link</h3>
-		&ldquo;Coinball&rdquo; is the puzzle for <a href="https://fivethirtyeight.com">fivethirtyeight.com</a>'s Riddler Classic for <a href="https://fivethirtyeight.com/features/how-much-is-a-perfect-game-of-jeopardy-worth/">October 13th, 2017</a>. This page is an attempt to simulate various strategies to find the best strategy, and answer the questions in the puzzle.
-		
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h3primary">The Matchup!</h2>
-		<form method="GET" action="simulate.html">
-			Player 1 Strategy<br />
-			<select name="player1Strategy">
-                <option value=1>always rush</option>
-                <option value=2>always pass</option>
-                <option value="3">always rush when ahead or tied</option>
-                <option value="4">always pass when ahead or tied</option>
-            </select>
-			<br /><br />
-			Player 2 Strategy<br />
-			<select name="player2Strategy">
-                <option value=1>always rush</option>
-                <option value=2>always pass</option>
-                <option value="3">always rush when ahead or tied</option>
-                <option value="4">always pass when ahead or tied</option>
-            </select>
-			<br /><br />
-		
-			Number of Games to Simulate:<br />
-			<input type="number" name="numberOfGames" value="100" min="1"><br />
+<body>
+<div style = "height: 2em;">  &nbsp;  </div>
 
-            <button type="submit">Simulate</button>
+<h1 class = "h1primary">Coinball</h1>
 
-		
-		</form>
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h3primary">Description</h3>
+Coinball is a contest where two players take turns trying to call a fair coin toss. The game lasts for 100 total tosses, 50 tosses for each player. On each toss, the player calling it announces either &ldquo;heads&rdquo; or &ldquo;tails&rdquo; and either &ldquo;rush&rdquo; or &ldquo;pass.&rdquo; If he says &ldquo;rush,&rdquo; he gets one point if he calls the toss correctly, and his opponent gets one point if the call is incorrect. Saying &ldquo;pass&rdquo; means the toss is worth two points to the caller if he calls the toss correctly and two points to his opponent if he does not. At the end, the player with the most points wins. (The margin of victory is irrelevant; in Coinball, league rankings are based only on wins, with a draw counting as half a win.)
 
-	</body>
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h3primary">Link</h3>
+&ldquo;Coinball&rdquo; is the puzzle for <a href="https://fivethirtyeight.com">fivethirtyeight.com</a>'s Riddler Classic for <a href="https://fivethirtyeight.com/features/how-much-is-a-perfect-game-of-jeopardy-worth/">October 13th, 2017</a>. This page is an attempt to simulate various strategies to find the best strategy, and answer the questions in the puzzle.
+
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h3primary">The Matchup!</h2>
+	<form method="GET" action="simulate.html">
+		Player 1 Strategy<br />
+		<select name="player1Strategy">
+			<option value=1>always rush</option>
+			<option value=2>always pass</option>
+			<option value="3">always rush when ahead or tied</option>
+			<option value="4">always pass when ahead or tied</option>
+		</select>
+		<br /><br />
+		Player 2 Strategy<br />
+		<select name="player2Strategy">
+			<option value=1>always rush</option>
+			<option value=2>always pass</option>
+			<option value="3">always rush when ahead or tied</option>
+			<option value="4">always pass when ahead or tied</option>
+		</select>
+		<br /><br />
+
+		Number of Games to Simulate:<br />
+		<input type="number" name="numberOfGames" value="100" min="1"><br />
+
+		<button type="submit">Simulate</button>
+
+	</form>
+
+</body>
 </html>

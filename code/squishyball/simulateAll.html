@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-	<head>
-		<title>National Squishyball League Championships</title>
-		<link rel="stylesheet" type="text/css" href="../../styles.css">	
-		<script src="js/angular.min.js"></script>
-	</head>
-	
-	<body ng-app="con1" ng-controller="newCtrl1">
-		<div style = "height: 2em;">  &nbsp;  </div>
-			
-		<h1 class = "h1primary">National Squishyball League Championships</h1>
-		
-		<div style = "height: 1em;">  &nbsp;  </div>
-		<h3 class = "h3primary">Simulation</h3>
+<head>
+	<title>National Squishyball League Championships</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+	<script src="js/angular.min.js"></script>
+</head>
 
-		<p>Number of Series to Simulate: <span id="numberOfSeries"></span></p>
-		<p id="results"></p><br />
+<body ng-app="con1" ng-controller="newCtrl1">
+<div style = "height: 2em;">  &nbsp;  </div>
 
-		<table id="output" border="5" width="100%">
-			<thead>
-				<th>Series Length</th>
-				<th>Winning Prize</th>
-				<th>Acme Series Wins</th>
-				<th>Expected Win Amount</th>
-			</thead>
+<h1 class = "h1primary">National Squishyball League Championships</h1>
 
-			<tr ng-repeat="x in series">
-				<td>{{x.seriesLength}}</td>
-				<td>{{x.winningPrize}}</td>
-				<td>{{x.acmeWins}}</td>
-				<td>{{x.expectedWinAmount}}</td>
-			</tr>
-			
-		</table>
-		
-		<script src="app/simulateAll.js"></script>
-	</body>
+<div style = "height: 1em;">  &nbsp;  </div>
+<h3 class = "h3primary">Simulation</h3>
+
+<p>Number of Series to Simulate: <span id="numberOfSeries"></span></p>
+<p id="results"></p><br />
+
+<table id="output" border="5" width="100%">
+	<thead>
+	<th>Series Length</th>
+	<th>Winning Prize</th>
+	<th>Acme Series Wins</th>
+	<th>Expected Win Amount</th>
+	</thead>
+
+	<tr ng-repeat="x in series">
+		<td>{{x.seriesLength}}</td>
+		<td>{{x.winningPrize}}</td>
+		<td>{{x.acmeWins}}</td>
+		<td>{{x.expectedWinAmount}}</td>
+	</tr>
+
+</table>
+
+<script src="app/simulateAll.js"></script>
+</body>
 </html>
