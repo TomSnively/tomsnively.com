@@ -29,8 +29,7 @@ body {
         display: grid;
     }
 
-    #section-a .content-text,
-    #section-b .content-text {
+    #section-a .content-text {
         columns: 2;
         column-gap: 2em;
     }
