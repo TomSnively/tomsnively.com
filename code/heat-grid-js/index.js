@@ -38,22 +38,21 @@ function colorChooserText (heat, maxHeat) {
     }
 }
 
-
 function sizeChecked(size) {
     //var sizeRadio = document.getElementById("gridSize");
     //console.log(sizeRadio);
     gridSize = size;
-    if(size == 17) {
+    if(size === 17) {
         maxHeat = 70;
-    } else if (size == 13) {
+    } else if (size === 13) {
         maxHeat = 42.5;
-    } else if (size == 11) {
+    } else if (size === 11) {
         maxHeat = 31;
-    } else if (size == 7) {
+    } else if (size === 7) {
         maxHeat = 13.3;
-    } else if (size == 5) {
+    } else if (size === 5) {
         maxHeat = 7.1;
-    } else if (size == 3) {
+    } else if (size === 3) {
         maxHeat = 2.7;
     } else {
         console.log ('sizeChecked: invalid size');

@@ -1,11 +1,11 @@
 .cell {
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     line-height: 26px;
     height:26px;
     width:26px;
     border-style:solid;
-    border-width:1px;
+    border-width:2px;
     border-color:black;
     margin: 1px 1px 1px 1px;
     background-color:#000;
@@ -20,7 +20,7 @@
 
 
 #grid {
-    margin:auto;
+    margin:20px;
 }
 
 
