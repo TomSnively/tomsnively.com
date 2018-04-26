@@ -55,7 +55,7 @@ function sizeChecked(size) {
     } else if (size === 3) {
         maxHeat = 2.7;
     } else {
-        console.log ('sizeChecked: invalid size');
+        console.log ("sizeChecked: invalid size");
     }
     initializeGridHTML(gridSize);
     initializeGridData(gridSize);
@@ -84,7 +84,6 @@ function cellClicked (row, column) {
 }
 
 function initializeGridHTML(size) {
-    //console.log('initializing grid HTML');
     var grid = document.getElementById("grid");
 
     var gridHTML = "";
@@ -95,11 +94,11 @@ function initializeGridHTML(size) {
         for (var j = 1; j <= size; j++) {
             gridHTML += '<div class=\"cell\" id="r' + i + '-' + j + '\" onclick=\"cellClicked(' + i + ', ' + j + ')\">0</div>';
         }
-        gridHTML += '</div>';
+        gridHTML += "</div>";
     }
 
-    grid.style.width = (size * 30) + 'px';
-    grid.style.height = (size * 30) + 'px';
+    grid.style.width = (size * 30) + "px";
+    grid.style.height = (size * 30) + "px";
 
     //console.log(gridHTML);
     grid.innerHTML = gridHTML;
@@ -114,7 +113,6 @@ function initializeGridData(size) {
 
 // the grid is going to go from 0 to gridsize+1.
 // The 0 row and column and gridsize+1 row and column will have temperature 0, and never change.
-    //console.log ('initializing grid data...');
     for (i=0; i <= gridSize + 1; i++) {
         for (var j=0; j <= gridSize + 1; j++) {
             grid[i][j] = new Object();
@@ -126,8 +124,6 @@ function initializeGridData(size) {
 }
 
 function heatInterval(size) {
-    //console.log ('in heatInterval');
-
     for (var i = 1; i <= size; i++) {
         for (var j = 1; j <= size; j++) {
             // First, increase temperature for all selected by 1 degree.
@@ -156,7 +152,7 @@ function heatInterval(size) {
             ) / 9;
             var color = colorChooser(grid[i][j].temperature, maxHeat);
             var textColor = colorChooserText(grid[i][j].temperature, maxHeat);
-            var cellID = 'r' + i + '-' + j;
+            var cellID = "r" + i + "-" + j;
             //console.log(cellID);
             var cell = document.getElementById(cellID);
             cell.style.backgroundColor = color;
@@ -166,18 +162,16 @@ function heatInterval(size) {
 }
 
 function updateGridHTML(size) {
-    //console.log('in updateGridHTML');
-
     var totalHeat = 0;
     for (var i = 1; i <= size; i++) {
         for (var j = 1; j <= size; j++) {
             totalHeat += grid[i][j].temperature;
-            var cell = document.getElementById('r' + i + '-' + j);
+            var cell = document.getElementById("r" + i + "-" + j);
             cell.innerHTML = Math.round(grid[i][j].temperature*10)/10;
         }
     }
-    document.getElementById('totalHeat').innerHTML = (Math.round(totalHeat*10)/10).toLocaleString(undefined,
-        {'minimumFractionDigits':1,'maximumFractionDigits':1});
+    document.getElementById("totalHeat").innerHTML = (Math.round(totalHeat*10)/10).toLocaleString(undefined,
+        {"minimumFractionDigits":1,"maximumFractionDigits":1});
 
     // Set the time for the next update.
     window.setTimeout(function(){
@@ -210,7 +204,6 @@ function turnAllOff() {
 
 // MAIN ROUTINE HERE
 
-//console.log ('index.js starting...');
 var gridSize = 11;
 var heatIncrease = 1;
 var intervalRate = 5;
@@ -225,6 +218,3 @@ window.setTimeout(function(){
     heatInterval(gridSize);
     updateGridHTML(gridSize);
 }, 1000 / intervalRate);
-
-
-

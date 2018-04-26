@@ -25,8 +25,8 @@
             </p>
             <p>Note that heat dissipates and is lost off the edge of the grid.</p>
             <p>As the heat for a particular cell increases, its background color changes. For this color pattern I mimicked the heat colors which actually occur when <a href="http://www.blksmth.com/heat_colors.htm">mild steel</a> is heated.</p>
-            <p>Heat Grid Simulator is a useful coding challenge for learning front end frameworks. This example was developed first in vanilla JavaScript,
-                and next using <a href="../heat-grid-react/">React</a>. In the near future I will have a version in Angular.</p>
+            <p>Heat Grid Simulator is a useful coding challenge for learning front end frameworks. This was developed first in vanilla JavaScript,
+                next using <a href="../heat-grid-react/">React</a>, and finally using <a href="../heat-grid-angular/">Angular</a>.</p>
             <h3>How to Use Heat Grid Simulator</h3>
             <p>Click/tap on a cell (a square in the grid below) to select it and add one degree of heat to that cell per heat interval.
                 (Selected cells are indicated by red borders.) You have the option to heat as many or as few of the cells as you like.</p>
@@ -53,8 +53,8 @@
                         <input type="radio" name="gridSize" value="17" onclick="sizeChecked(17)"> 17x17
                     </label>
                 </p>
-                <p>Choose the heat interval speed. How many times does the screen update per second (1-20)?
-                    <input type="number" id="intervalSpeed" min="1" max="20" value="5" onchange="speedChanged()"/>
+                <p>Choose the heat interval speed. How many times does the screen update per second?
+                    <input type="number" id="intervalSpeed" min="1" max="200" value="5" onchange="speedChanged()"/>
                 </p>
                 <p>
                     <input type="button" class="btn" value="Turn All On" onclick="turnAllOn()" />
@@ -68,7 +68,7 @@
             </div>
 
             <div id="totalHeatFormat">
-                <span id="totalHeat">0.0</span>&nbspTotal Heat
+                Total Heat <span id="totalHeat">0.0</span>
             </div>
         </div>
         <br />
